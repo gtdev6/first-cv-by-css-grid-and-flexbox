@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  margin-top: 40px;
+  width: 880px;
+  height: 1080px;
+  border-right: 1px solid black;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  grid-template-rows: 24% 1fr 20px;
+  grid-template-areas:
+    "alias-top-container alias-top-container alias-top-container"
+    "alias-left-container alias-inner-container alias-inner-container"
+    "alias-footer-cont alias-footer-cont alias-footer-cont";
+  overflow: hidden;
+  box-shadow: 1px 4px 20px 2px rgba(0, 0, 0, 0.66);
+}
+
+.top-container {
+  grid-area: alias-top-container;
+  background-color: #313c40;
+  display: flex;
+}
+
+.left-container {
+  grid-area: alias-left-container;
+  background-color: #313c40;
+  padding: 60px 15px 10px 15px;
+}
+
+.inner-container {
+  grid-area: alias-inner-container;
+  background-color: white;
+  padding: 70px 15px 10px 15px;
+}
+
+.footer-cont {
+  grid-area: alias-footer-cont;
+  background-color: #4dacc0;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* 
+=========================
+    Top Container
+========================
+ */
+
+#img-container {
+  /* border: 2px solid white; */
+  width: 20%;
+}
+
+.actual-image {
+  display: flex;
+  justify-content: center;
+  align-items: first center;
+  background-color: lightblue;
+  height: 60%;
+  margin: 10px;
+  border-radius: 50% 50%;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.actual-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.bio-container {
+  width: 45%;
+}
+
+.address-container {
+  /* border: 2px solid blue; */
+  width: 35%;
+}
+
+.bio-container {
+  padding: 10px 2px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#name {
+  margin-bottom: 2px;
+  color: white;
+  font-weight: 700;
+  font-size: 35px;
+}
+#name span {
+  color: #4fc3f7;
+}
+
+#person-title {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.bio-container p {
+  color: white;
+}
+
+.address-container {
+  padding: 20px;
+}
+
+.address-container {
+  color: white;
+}
+.address-point {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: #0288d1;
+  color: white;
+  border-radius: 50%;
+}
+.address-point a {
+  color: #4fc3f7;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* 
+=========================
+    SVG Styles
+========================
+ */
+
+#svg-left {
+  color: yellow;
+  /* clip-path: path(
+    "M0,0S78.89,22.69,124.71,19.64c0,0,22.25,22.69,60.65,22.69,0,0-127.24,3.93-185.36-21.16V0Z");
+  */
+  position: relative;
+  z-index: 3;
+  left: -0px;
+  width: 381px;
+  height: 100px;
+  top: 44px;
+}
+
+#svg-middle {
+  color: yellow;
+  position: relative;
+  z-index: 3;
+  left: 226px;
+  top: -52px;
+  width: 153px;
+  height: 100px;
+}
+
+#svg-right {
+  color: yellow;
+  position: relative;
+  z-index: 3;
+  left: 221px;
+  top: -190px;
+  width: 660px;
+  height: 100px;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* 
+=========================
+    Left Container
+========================
+ */
+
+.language-container,
+.software-container,
+.hobbies-container {
+  /* border: 2px solid white; */
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  margin-bottom: 10px;
+}
+
+.language-container {
+  height: 20%;
+}
+
+.language-container #lang-title,
+.software-container #software-title,
+.hobbies-container #hobbies-title {
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 3px solid white;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang-item .text-part {
+  display: flex;
+  align-items: center;
+}
+
+.lang-item .lang-name {
+  font-weight: 900;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.lang-item .icon-cont,
+.soft-item .icon-cont,
+.hobbies-item .icon-cont,
+.aca-heading .icon-cont,
+.pro-item .icon-cont {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.software-container #software-title {
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 3px solid white;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.software-container {
+  height: 40%;
+}
+
+.lang-item,
+.soft-item,
+.hobbies-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.soft-item .text-part,
+.hobbies-item .text-part {
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+}
+
+.soft-item .pertage-part {
+  background-color: white;
+  color: black;
+  width: 50px;
+  height: 24px;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.hobbies-container {
+  height: 35%;
+}
+
+/* ------------------------------------------------------------------- */
+
+/* 
+=========================
+    Inner Container
+========================
+ */
+
+.inner-container .academics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  /* background-color: antiquewhite; */
+  /* border: 2px solid purple; */
+}
+
+.inner-container .aca-title,
+.programming-title {
+  height: 40px;
+  width: 80%;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: #4dacc0;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.aca-container {
+  width: 100%;
+  height: 88%;
+  margin-bottom: 40px;
+}
+
+.academics-container .matric-title,
+.inter-title {
+  height: 30px;
+  width: 25%;
+  color: black;
+  font-weight: 900;
+  text-decoration: underline;
+  font-size: 20px;
+
+  display: flex;
+}
+
+.aca-heading .icon-cont {
+  background-color: black;
+  margin: 4px;
+}
+
+.aca-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.matric-info,
+.intermediate-info {
+  padding: 2% 10%;
+  height: 40%;
+  width: 100%;
+}
+
+.aca-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+.aca-item h4 {
+  margin-right: 5px;
+  width: 30%;
+}
+
+.programming-title {
+  font-size: 28px;
+}
+
+.pro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.pro-item .icon-cont {
+  background-color: black;
+}
+
+.pro-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
