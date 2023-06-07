@@ -2,7 +2,7 @@
 
 **Template**
 
-![Template Image](Images\OIF.jpg "a title")
+![Template Image](Images/OIF.jpg "a title")
 
 **Colors**
 
